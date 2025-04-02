@@ -6,7 +6,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <h1 className="text-center">Weather App React</h1>
-        <Weathers />
+        <Weathers deCity="Paris" bird='chicken'/>
         <p className="text-center">
           This project was made by{" "}
           <a
