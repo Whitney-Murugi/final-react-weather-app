@@ -13,7 +13,7 @@ export default function WeatherInfo(props) {
         <li>{props.data.descriptions}</li>
       </ul>
       <div className="row">
-        <div className="col-6 clear-fix">
+        <div className="col-6 clearfix">
           <img
             src={props.data.iconUrl}
             width="80px"

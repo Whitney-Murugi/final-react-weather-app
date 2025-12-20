@@ -13,6 +13,7 @@ export default function Weathers(props) {
     setWeatherData({
       temperature: Math.round(response.data.main.temp),
       humidity: response.data.main.humidity,
+      coordinates: response.data.coord,
       wind: response.data.wind.speed,
       city: response.data.name,
       iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
@@ -61,7 +62,7 @@ export default function Weathers(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
