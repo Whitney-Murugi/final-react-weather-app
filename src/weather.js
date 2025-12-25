@@ -16,7 +16,7 @@ export default function Weathers(props) {
       coordinates: response.data.coord,
       wind: response.data.wind.speed,
       city: response.data.name,
-      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,              
       descriptions: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
     });
@@ -62,7 +62,7 @@ export default function Weathers(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast coordinates={weatherData.coordinates} />
+<WeatherForecast coordinates={weatherData.coordinates} key={weatherData.city} />
       </div>
     );
   } else {
